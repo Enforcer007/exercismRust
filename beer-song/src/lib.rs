@@ -12,9 +12,9 @@ pub fn verse(n: u32) -> String {
 }
 
 pub fn sing(start: u32, end: u32) -> String {
-    let string = (end..=start)
+    (end..=start)
         .rev()
         .map(|i| verse(i))
-        .fold(String::new(), |a, b| a + &b + "\n");
-    string[..string.len() - 1].into()
+        .collect::<Vec<String>>()
+        .join("\n")
 }
