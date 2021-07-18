@@ -10,7 +10,7 @@ Rust is a ~~systems level~~ general purpose programming language (I feel) helpin
 To know more about this fantastic language check this [stackoverflow-blog](https://stackoverflow.blog/2020/01/20/what-is-rust-and-why-is-it-so-popular/)
 
 
-This repo consists of my solutions to such exercises and refactored to be idiomatic as per the mentors suggestions.
+This repo consists of my solutions to exercism exercises and refactored to be idiomatic as per the mentors suggestions.
 
 Check-out Exercism Rust-Track: [Rust-Track](https://exercism.io/tracks/rust)
 
