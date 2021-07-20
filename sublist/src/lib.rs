@@ -18,7 +18,6 @@ pub fn sublist<T: PartialEq>(_first_list: &[T], _second_list: &[T]) -> Compariso
         (true, false, false) => Comparison::Superlist,
         (true, true, false) => Comparison::Sublist,
         (true, _, true) => Comparison::Equal,
-        (false, _, true) => Comparison::Unequal,
-        (false, _, false) => Comparison::Unequal,
+        (false, _, _) => Comparison::Unequal,
     }
 }
