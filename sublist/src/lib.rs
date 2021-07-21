@@ -13,7 +13,11 @@ pub fn sublist<T: PartialEq>(_first_list: &[T], _second_list: &[T]) -> Compariso
     };
     let small_n = small_list.len();
     let big_n = big_list.len();
-    let subset = (0..=big_n - small_n).any(|x| *small_list == big_list[x..x + small_n]);
+    let subset = match small_n != 0 {
+        true => big_list.windows(small_n).any(|x| x == small_list),
+        false => true,
+    };
+
     match (subset, swapped, big_n == small_n) {
         (true, false, false) => Comparison::Superlist,
         (true, true, false) => Comparison::Sublist,
